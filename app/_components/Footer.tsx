@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="text-sm">
+        <div className="text-sm max-w-7xl mx-auto">
             <div className="flex justify-between items-center">
-                <Image src="/images/logo.png" alt="nodebench" width={200} height={200} />
+                <Image src="/images/logo.png" alt="nodebench" width={160} height={200} />
 
                 <div className="flex gap-3">
                     <Link href="https://twitter.com/nodebench" target="__blank">
