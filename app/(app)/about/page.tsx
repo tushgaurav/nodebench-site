@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Title, Main, Paragraph, Subtitle } from "@/components/ui/static-pages";
+import { Main, Paragraph, Subtitle } from "@/components/ui/static-pages";
 
 export const metadata: Metadata = {
     title: "About",
     description: "Learn more about nodebench - what we do and why we do it",
 };
 
-export default function PrivacyPolicyPage() {
+export default function AboutPage() {
     return (
         <>
             <Image src="/images/about_us_hero.png" alt="About NodeBench" width={1980} height={120}
