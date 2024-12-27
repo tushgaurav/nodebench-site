@@ -12,8 +12,8 @@ export default function PrivacyPolicyPage() {
         <Main>
             <Title title="Privacy Policy" />
             <h1 className="text-5xl font-semibold mt-10 mb-12 hover:rotate-3 transition-transform group">
-                yes, we&apos;re complying to this GDPR thing
-                <span className="hidden px-4 group-hover:inline-block">
+                yes, we&apos;re complying to this GDPR thing<span className="group-hover:hidden">.</span>
+                <span className="hidden px-2 group-hover:inline-block">
                     🤷‍♂️
                 </span>
             </h1>
