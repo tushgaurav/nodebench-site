@@ -1,9 +1,10 @@
 import BackgroundImageSection from "@/components/ui/background-image-section";
 import { LinkButton } from "@/components/ui/button";
+import background from "./images/showcase_background.png";
 
 export default function Showcase() {
     return (
-        <BackgroundImageSection image="/images/showcase_background.png" className="max-h-96">
+        <BackgroundImageSection image={background} className="">
             <div>
                 <h3 className="text-2xl tracking-tight font-semibold">
                     Want to showcase your cutting-edge<br />hardware?

@@ -1,18 +1,28 @@
 import { cn } from "@/lib/utils"
+import { StaticImport } from "next/dist/shared/lib/get-img-props"
 import Image from "next/image"
 
 export default function BackgroundImageSection({ image, className, children }:
-    { image: string, className?: string, children: React.ReactNode }) {
+    { image: string | StaticImport, className?: string, children: React.ReactNode }) {
     return (
-        <section className={cn("relative max-h-80 min-h-60 overflow-hidden", className)}>
-            <div className="section-container">
-                <div className="absolute p-6 h-full flex flex-col justify-center">
+        <section className={cn("relative p-6 md:p-0 min-h-60 ", className)}>
+            <div className="relative w-full">
+                <div className="section-container p-6 flex flex-col justify-center">
                     {children}
                 </div>
+                <Image
+                    src={image}
+                    alt="background image"
+                    fill
+                    className="
+                        hidden md:block
+                        object-cover
+                        absolute inset-0
+                        -z-10
+
+                    "
+                />
             </div>
-            <Image src={image} alt="background image" width="1500" height="2500" className="
-               object-none object-center w-full h-full 
-            " />
         </section>
     )
 }

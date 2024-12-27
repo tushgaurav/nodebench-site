@@ -1,8 +1,9 @@
 import BackgroundImageSection from "@/components/ui/background-image-section"
+import background from "./images/realdata_background.png"
 
 export default function RealData() {
     return (
-        <BackgroundImageSection image="/images/realdata_background.png">
+        <BackgroundImageSection image={background}>
             <h2 className="text-3xl font-semibold tracking-tight text-brand_orange">
                 Real Data.<br />
                 Real Insights.<br />
