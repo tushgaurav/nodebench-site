@@ -20,7 +20,7 @@ export function Subtitle({ subtitle, className }: { subtitle: string, className?
 
 export function Main({ children }: { children: React.ReactNode }) {
     return (
-        <main className="container max-w-6xl mx-auto px-4">
+        <main className="container max-w-6xl mx-auto px-4 mb-20">
             {children}
         </main>
     )
