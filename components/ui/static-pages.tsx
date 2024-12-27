@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function Title({ title, className }: { title: string, className?: string }) {
+export function Title({ title, className }: { title: string, className?: string }) {
     return (
         <h1 className={cn(
             "text-2xl font-semibold tracking-tight mt-6 mb-4",
@@ -12,7 +12,7 @@ export default function Title({ title, className }: { title: string, className?:
 export function Subtitle({ subtitle, className }: { subtitle: string, className?: string }) {
     return (
         <h2 className={cn(
-            "text-lg mb-6",
+            "text-lg mb-2 font-semibold tracking-tight",
             className
         )}>{subtitle}</h2>
     )
