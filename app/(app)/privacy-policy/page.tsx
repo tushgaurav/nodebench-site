@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Title, { Main, Paragraph } from "@/components/ui/static-pages";
+import { Main, Title, Paragraph } from "@/components/ui/static-pages";
 import PPAccordions from "./_components/PPAccordians";
 
 export const metadata: Metadata = {

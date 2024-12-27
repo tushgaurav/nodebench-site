@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <>
+        <div className="text-sm">
             <div className="flex justify-between items-center">
                 <Image src="/images/logo.png" alt="nodebench" width={200} height={200} />
 
@@ -27,7 +27,7 @@ export default function Footer() {
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
                 <Link href="/help">Help</Link>
-                <Link href="/ethics">Ethics Statement</Link>
+                <Link href="/ethics-statement">Ethics Statement</Link>
             </div>
 
             <hr className="border-t border-white" />
@@ -42,14 +42,11 @@ export default function Footer() {
                 <p>&copy; {new Date().getFullYear()} nodebench. All rights reserved.</p>
                 <ul className="flex gap-2">
                     <li>
-                        <Link href="/terms">Terms</Link>
-                    </li>
-                    <li>
                         <Link href="/privacy-policy">Privacy Policy</Link>
                     </li>
                 </ul>
 
             </div>
-        </>
+        </div>
     )
 }

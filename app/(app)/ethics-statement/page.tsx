@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Main, Paragraph, Subtitle, Title } from "@/components/ui/static-pages";
+import { Main, Paragraph, Title } from "@/components/ui/static-pages";
 
 export const metadata: Metadata = {
     title: "Ethics Statement",
     description: "Our commitment to transparency, honesty and ethical benchmarking practices in reviewing single board computers and IoT devices",
 };
 
-export default function AboutPage() {
+export default function EthicsStatementPage() {
     return (
         <>
             <Main>
