@@ -20,13 +20,13 @@ export function Subtitle({ subtitle, className }: { subtitle: string, className?
 
 export function Main({ children }: { children: React.ReactNode }) {
     return (
-        <main className="container max-w-6xl mx-auto px-4 mb-20">
+        <main className="container mx-auto px-4 mb-20">
             {children}
         </main>
     )
 }
 
-export function Paragraph({ children, className }: { children: React.ReactNode, className?: string }) {
+export function Paragraph({ children, className }: { children?: React.ReactNode, className?: string }) {
     return (
         <p className={cn(
             "mb-6 max-w-[82ch]",

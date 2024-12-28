@@ -1,3 +1,8 @@
+import Topbar from '../_components/Topbar.tsx'
+import Glance from '../_components/Glance.tsx'
+
+import jetsonHero from './images/jetson_orin.png'
+
 export const metadata = {
     title: 'Nvidia Jetson Orin Nano Review',
     alternates: {
@@ -5,20 +10,58 @@ export const metadata = {
     },
 }
 
-# On Developer Products
-## 1. You should embrace open - source
+<Topbar
+    brandLogo='/images/brands/nvidia.png'
+    title="Jetson Orin Nano"
+    author='Tushar Gaurav'
+    date='28 Dec 2025'
+      />
+
+<Glance
+    images={[
+        {
+            src: jetsonHero,
+            alt: 'Jetson Orin Nano'
+        },
+        {
+            src: jetsonHero,
+            alt: 'Jetson Orin Nano'
+        },
+        {
+            src: jetsonHero,
+            alt: 'Jetson Orin Nano'
+        }
+    ]}
+    productData={
+        {
+            launchDate: '28 Dec 2025',
+            price: '$199',
+            gpu: 'Orin',
+        }
+    }
+    description='The best single board computer for AI workloads, comes with Jetpack 6 SDK for development.'
+/>
+
+# Summary
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+# IOs
 
 Experienced developers love open - source products because they've seen the opposite. They've struggled to debug a “black box” closed - source tool, or worse, had a previously open tool change licenses or close its source code.
 
+![Jetson Orin Nano](/images/review/jetson-orin-nano/jetson_io.png)
+
+[Open-source](/n/open-source) tools often have better documentation, as well. New developers love open - source products because they're learning skills that help them advance in their career—their knowledge transfers from company to company. Open-source tools often have better documentation, as well.
+
 New developers love open - source products because they're learning skills that help them advance in their career—their knowledge transfers from company to company. Open-source tools often have better documentation, as well.
 
-## 2. You should have a free tier
+# Performance
 
 Developers don't want to talk to your sales team. They want to try out the product with as little friction as possible. Start free, then grow, once they've validated the product works and will solve their needs.
 
 There are exceptions to this rule.You might have procured software that required months of negotiations, license keys to get access, and hand guided provisioning of resources from a human.But ask your developer—they would have preferred if they could have started self - serve.
 
-## 3. You should have excellent documentation
+# Thermals
 
 The better the documentation, the more likely the developer is to try your product.
 
@@ -26,7 +69,7 @@ This isn't about specific UI features like dark mode or ⌘+K search dialogs. Ho
 
 Educational material should be equally compelling for both beginners and experts.Experts love to hear concepts explained in a simple way.Beginners want new concepts progressively explained.Don't drop ten new concepts and five acronyms right away. Write like you're teaching beginners.
 
-## 4. You should be able to get support from developers
+# Conclusion
 
 When developers can't find the answers in your docs, they'll reach out to support.
 
@@ -34,7 +77,7 @@ They want to talk to someone who empathizes and understands their problems.It's 
 
 This is why roles like Developer Advocates or Customer Success Engineers exist.Developers expect to talk to developers.
 
-## 5. You should be part of a community
+## You should be part of a community
 
 Where do developers go to hang out ? Online and in -person communities.
 
