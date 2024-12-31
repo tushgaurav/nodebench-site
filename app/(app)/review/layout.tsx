@@ -13,7 +13,7 @@ export default function ReviewsPageLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="container mx-auto my-4 px-4 mb-20">
+        <div className="container mx-auto max-w-6xl my-4 px-4 mb-20">
             {children}
         </div>
     );

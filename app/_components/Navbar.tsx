@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="container mx-auto p-4 flex items-center justify-between">
+        <nav className="container max-w-7xl mx-auto p-4 flex items-center justify-between">
             <Link href="/">
                 <Image src="/images/logo.png" alt="nodebench" width={150} height={200} />
             </Link>
