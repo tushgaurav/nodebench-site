@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nvidia Jetson Orin Nano Review",
+    "url": "review/jetson-orin-nano",
+    "description": "The Nvidia Jetson Orin Nano is the best single board computer for AI workloads, comes with Jetpack 6 SDK for development.",
+    "date": "1 Jan 2025",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "productData": {
+      "launchDate": "28 Dec 2025",
+      "price": "$199",
+      "gpu": "Orin"
+    },
+    "thumbnail": "/images/review/jetson-orin-nano/jetson_io.png"
+  },
+  {
+    "title": "Raspberry Pi 5 Review",
+    "url": "review/raspberry-pi-5",
+    "description": "The Raspberry Pi 5 is the best single board computer for AI workloads, comes with Jetpack 6 SDK for development.",
+    "date": "28 Dec 2024",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "productData": {
+      "launchDate": "28 Dec 2025",
+      "price": "$199",
+      "gpu": "Orin"
+    },
+    "thumbnail": "/images/review/raspberry-pi-5/thumbnail.png"
+  }
+]

@@ -19,22 +19,30 @@ const pages = fs
             !folder.startsWith("(") && !folder.startsWith("_") && folder !== "og",
     );
 
-const reviews = pages.map((page) => {
-    try {
-        const { metadata } = require(`./${page}/page.mdx`);
-        const { reviewInfo } = require(`./${page}/page.mdx`);
+function getReviewsMetadata() {
+    const reviews = pages.map((page) => {
+        try {
+            const { metadata } = require(`./${page}/page.mdx`);
+            const { reviewInfo } = require(`./${page}/page.mdx`);
 
-        return {
-            title: metadata.title,
-            url: `review/${page}`,
-            ...metadata,
-            ...reviewInfo
-        };
-    } catch (error) {
-        console.error(`Error loading metadata for ${page}:`, error);
-        return null;
-    }
-}).filter(Boolean).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            return {
+                title: metadata.title,
+                url: `review/${page}`,
+                ...metadata,
+                ...reviewInfo
+            };
+        } catch (error) {
+            console.error(`Error loading metadata for ${page}:`, error);
+            return null;
+        }
+    }).filter(Boolean).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    fs.writeFileSync('public/data/reviews.json', JSON.stringify(reviews, null, 2));
+    
+    return reviews;
+}
+
+const reviews = getReviewsMetadata();
 
 
 function FeaturedReviewCard({ title, image, description, author, date, link }: { title: string, image: string, description: string, author: {
