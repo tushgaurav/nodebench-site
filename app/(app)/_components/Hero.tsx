@@ -12,10 +12,16 @@ export default function Hero() {
             <div className="section-container px-6">
                 <div className="absolute px-4 py-16  flex flex-col justify-between h-full  ">
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                     className="tracking-tighter text-7xl font-bold">Benchmarks <br />that matter
+                        transition={{ 
+                            duration: 0.8,
+                            ease: "easeOut"
+                        }}
+                        className="tracking-tighter text-7xl font-bold bg-gradient-to-b from-orange-900 to-black bg-clip-text text-transparent"
+                    >
+                        Real Performance <br />
+                        Real Results
                     </motion.h1>
                     <SearchBar />
                 </div>

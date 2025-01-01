@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className="container max-w-7xl mx-auto p-4 flex items-center justify-between">
             <Link href="/">
-                <Image src="/images/logo.png" alt="nodebench" width={150} height={200} />
+                <Image src="/images/logo.png" alt="nodebench" width={150} height={90} />
             </Link>
             <ul className="flex gap-4 text-sm">
                 <li><Link href="/benchmark">Benchmarks</Link></li>
