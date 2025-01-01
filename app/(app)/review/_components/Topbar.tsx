@@ -16,9 +16,9 @@ export default function Topbar({
     return (
         <div className="mb-4">
             <div className="flex items-center gap-2 py-2">
-                {brandLogo && <Image src={brandLogo} alt={brandName} width="100" height="20" />}
+                {brandLogo && <Image src={brandLogo} alt={brandName} width="20" height="10" />}
                 {!brandLogo && brandName && <span>{brandName}</span>}
-                <hr className=" w-full bg-brand_orange-light h-2" />
+                <hr className=" w-full bg-brand_orange-light/20 h-2" />
             </div>
             <h1 className="font-bold text-2xl track">{title}</h1>
             <div className="text-sm mt-2 flex items-baseline gap-4">

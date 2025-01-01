@@ -1,13 +1,14 @@
 import Topbar from '../_components/Topbar.tsx'
 import Glance from '../_components/Glance.tsx'
 
-import jetsonHero from './images/jetson_orin.png'
+import raspberryHero from './images/raspberrypi5_top.jpg'
 
 export const metadata = {
-    title: 'Nvidia Jetson Orin Nano Review',
-    description: 'The Nvidia Jetson Orin Nano is the best single board computer for AI workloads, comes with Jetpack 6 SDK for development.',
-    date: '1 Jan 2025',
+    title: 'Raspberry Pi 5 Review',
+    description: 'The Raspberry Pi 5 is the best single board computer for AI workloads, comes with Jetpack 6 SDK for development.',
+    date: '28 Dec 2024',
     authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+   
 }
 
 export const reviewInfo = {
@@ -16,31 +17,23 @@ export const reviewInfo = {
         price: '$199',
         gpu: 'Orin',
     },
-    thumbnail: "/images/review/jetson-orin-nano/jetson_io.png"
+   thumbnail: "/images/review/raspberry-pi-5/thumbnail.png"
 }
 
-
-
 <Topbar
-    brandLogo='/images/brands/nvidia.png'
-    title="Jetson Orin Nano"
+    brandLogo='/images/brands/raspberry_pi.png'
+    title="Raspberry Pi 5"
     author='Tushar Gaurav'
-    date='28 Dec 2025'  />
+    date='1 Jan 2025'
+      />
 
 <Glance
     images={[
         {
-            src: jetsonHero,
+            src: raspberryHero,
             alt: 'Jetson Orin Nano'
         },
-        {
-            src: jetsonHero,
-            alt: 'Jetson Orin Nano'
-        },
-        {
-            src: jetsonHero,
-            alt: 'Jetson Orin Nano'
-        }
+        
     ]}
     productData={
         {
