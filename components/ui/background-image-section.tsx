@@ -12,14 +12,14 @@ export default function BackgroundImageSection({ image, className, children }:
                 </div>
                 <Image
                     src={image}
-                    alt="background image"
                     fill
+                    alt="background image"
                     className="
                         hidden md:block
                         object-cover
+                        object-center
                         absolute inset-0
                         -z-10
-
                     "
                 />
             </div>

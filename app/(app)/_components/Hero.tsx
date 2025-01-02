@@ -18,7 +18,7 @@ export default function Hero() {
                             duration: 0.8,
                             ease: "easeOut"
                         }}
-                        className="tracking-tighter text-7xl font-bold bg-gradient-to-b from-orange-900 to-black bg-clip-text text-transparent"
+                        className="tracking-tighter text-5xl md:text-7xl font-bold bg-gradient-to-b from-orange-900 to-black bg-clip-text text-transparent"
                     >
                         Real Performance <br />
                         Real Results
