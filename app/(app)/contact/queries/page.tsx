@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Main, Paragraph, Subtitle, Title } from "@/components/ui/static-pages";
-import Link from "next/link";
+import { Main, Title } from "@/components/ui/static-pages";
 import QueryForm from "./QueryForm";
 
 export const metadata: Metadata = {

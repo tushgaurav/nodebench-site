@@ -59,7 +59,7 @@ export default function QueryForm() {
         } catch (error) {
             toast({
                 title: "Failed to send message",
-                description: "Please try again.",
+                description: JSON.stringify(error),
             })
         } finally {
             setIsSubmitting(false);
