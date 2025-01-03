@@ -13,6 +13,7 @@ import { Turnstile } from '@marsidev/react-turnstile'
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast"
 import { Loader2 } from "lucide-react";
+import posthog from 'posthog-js';
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -56,6 +57,13 @@ export default function QueryForm() {
                 title: "Message sent",
                 description: "Your message has been sent successfully!",
             })
+
+            posthog.capture('Contact form submit', {
+                category: values.category,
+                subject: values.subject,
+                email: values.email
+            })
+
         } catch (error) {
             toast({
                 title: "Failed to send message",

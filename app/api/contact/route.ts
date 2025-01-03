@@ -1,5 +1,6 @@
 import { db } from "@/db";
 import { messages } from "@/db/schema";
+import PostHogClient from "@/app/posthog";
 
 export async function POST(req: Request) {
     try {
@@ -21,6 +22,14 @@ export async function POST(req: Request) {
                 message,
                 category
             });
+
+            const posthog = PostHogClient()
+            posthog.capture({
+                distinctId: email,
+                event: 'Form details saved to db',
+            })
+            await posthog.shutdown()
+            
         } catch (e) {
             console.error(e);
             return Response.json({ message: "Error adding to database" }, { status: 500 });
