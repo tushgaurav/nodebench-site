@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Main, Paragraph, Subtitle, Title } from "@/components/ui/static-pages";
 import Link from "next/link";
+import Button from "@/components/BrandButton";
+import { MoveUpRight } from "lucide-react"
 
 export const metadata: Metadata = {
     title: "Contact Us",
@@ -25,11 +27,18 @@ export default function AboutPage() {
                 </ul>
 
                 <Subtitle subtitle="Collaboration & Submissions" />
-                <Paragraph>
+                <Paragraph className="mb-2">
                     Manufacturers, developers, or makers with interesting hardware? Check out our contact form for details on product reviews and collaboration.
                 </Paragraph>
 
-                <Subtitle subtitle="Got Feedback?" />
+                <Link href="/contact/queries">
+                    <Button className="flex items-center gap-2 text-sm">
+                        Contact Form
+                        <MoveUpRight className="h-4 w-4" />
+                    </Button>
+                </Link>
+
+                <Subtitle className="mt-6" subtitle="Got Feedback?" />
                 <Paragraph>
                     Your insights drive NodeBench forward. Whether it&apos;s a review suggestion, a testing methodology critique, or just a random tech observation, I want to hear it. Consider submitting a PR on nodebench&apos;s github repository.
                 </Paragraph>
