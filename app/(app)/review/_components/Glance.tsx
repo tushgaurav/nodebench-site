@@ -65,7 +65,7 @@ export default function Glance({
                 <Image
                     src={images[0].src}
                     alt={images[0].alt}
-                    className=""
+                    className="w-full h-full object-cover"
                 />
             </div>
 
