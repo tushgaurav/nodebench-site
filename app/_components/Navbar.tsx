@@ -14,11 +14,11 @@ export default function Navbar() {
                     transition-colors
                     duration-300
                 ">Reviews</Link></li>
-                <li><Link href="/tutorial" className="
+                <li><Link href="/articles" className="
                     hover:text-orange-200
                     transition-colors
                     duration-300 
-                ">Tutorials</Link></li>
+                ">Articles</Link></li>
             </ul>
         </nav>
     )
