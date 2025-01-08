@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+
+     "new-article": "npx tsx ./scripts/create_article.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
