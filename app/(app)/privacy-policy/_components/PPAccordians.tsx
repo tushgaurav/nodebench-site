@@ -14,15 +14,15 @@ function Accordions({ data, defaultOpenValue }: {
     return (
         <Accordion type="single" collapsible defaultValue={defaultOpenValue} className="space-y-4">
             {data.map((item, index) => (
-                <AccordionItem key={index} value={item.value || item.title} className="border rounded-lg px-4 ">
+                <AccordionItem key={index} value={item.value || item.title} className="border border-zinc-300 rounded-lg px-4 ">
                     <AccordionTrigger className="py-4 hover:no-underline">
                         <div className="flex gap-4 items-center">
                             {item.icon && (
-                                <span className="text-muted-foreground">
+                                <span>
                                     {item.icon}
                                 </span>
                             )}
-                            <span className="text-lg font-semibold text-muted-foreground ">{item.title}</span>
+                            <span className="text-lg font-semibold">{item.title}</span>
                         </div>
                     </AccordionTrigger>
                     <AccordionContent className="pb-4 pr-4 text-muted-foreground">

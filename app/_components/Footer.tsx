@@ -26,7 +26,6 @@ export default function Footer() {
             <div className="flex items-baseline py-4 gap-4 mt-2">
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
-                <Link href="/help">Help</Link>
                 <Link href="/ethics-statement">Ethics Statement</Link>
             </div>
 
