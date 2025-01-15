@@ -4,6 +4,7 @@ import Hero from "./_components/Hero";
 import RealData from "./_components/RealData";
 import Showcase from "./_components/Showcase";
 import LatestReviews from "./_components/LatestReviews";
+import NodebenchMarkAnnouncement from "./_components/NodebenchMark";
 
 export const metadata: Metadata = {
   title: "Benchmarks and Reviews - nodebench",
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <LatestReviews />
       <RealData />
+      <NodebenchMarkAnnouncement />
       <Showcase />
     </main>
   );

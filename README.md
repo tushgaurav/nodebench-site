@@ -4,25 +4,27 @@
 
 > Hardware reviews and technical articles for Indian audiences. Still in development.
 
-
 ## Live Website
-Here is a main webapp:  https://nodebench.com/
 
+Here is a main webapp: https://nodebench.com/
 
 ## Running Locally
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/prokits/nodebench-site.git
    cd nodebench-site
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up environment variables:
+
    - Copy `.env.example` to `.env.local`:
      ```bash
      cp .env.example .env.local
@@ -37,6 +39,7 @@ Here is a main webapp:  https://nodebench.com/
      ```
 
 4. Run the development server:
+
    ```bash
    npm run dev
    ```
@@ -46,6 +49,7 @@ Here is a main webapp:  https://nodebench.com/
 The app will use Turbopack in development for faster refresh times. Any changes you make to the files will be reflected immediately in the browser.
 
 ### Development
+
 Want to contribute? Great!
 
 To fix a bug or enhance an existing module, follow these steps:
@@ -56,14 +60,13 @@ To fix a bug or enhance an existing module, follow these steps:
 - Add changes to reflect the changes made
 - Commit your changes (`git commit -am 'Improve feature'`)
 - Push to the branch (`git push origin improve-feature`)
-- Create a Pull Request 
+- Create a Pull Request
 
 ### Bug / Feature Request
 
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/prokits/nodebench-site/issues/new) by including your search query and the expected result.
 
 If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/prokits/nodebench-site/issues/new). Please include sample queries and their corresponding results.
-
 
 ### Tech Stack
 
@@ -78,8 +81,41 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) - Bot protection.
 - [PostHog](https://posthog.com/) - Product analytics.
 
-
-
 ### Additional Scripts
+
 - `npm run new-article` - Create a new article template with metadata and frontmatter.
 
+### Creating Static Pages with UI Components
+
+If you want to create a new page in the top level of the website (nodebench.com/<this_level>), There are serveral components available that
+may help to format the page correctly.
+
+The "@/components/ui/static-pages" file provides Main, Paragraph, Subtitle, Title components which are wrappers over existing standard HTML components with applied styles and proper formatting guidelines.
+
+- Main - Wraps the whole page with a main tag with container tags and applied padding and margins. You should wrap your top-level pages with this component. Props: children and className.
+- Title - Used for title of the page, displayed at the top after the nav. This is the main title. Should be ideally used once in the page. title prop is required.
+- Subtitle - Any other title or heading on the page other than the main title. title prop is required.
+- Paragraph - Any body of text. Wraps a p tag. props: children and className.
+
+Here is a example page (/contact) that shows how to use these components:
+
+```jsx
+import { Main, Title, Subtitle, Paragraph } from "@/components/ui/static-pages";
+
+export default function ContactPage() {
+  <Main>
+    <Title title="Contact Us" />
+    <Paragraph className="mb-10">
+      Have a burning tech question, want to discuss a hardware project, or just
+      geek out about computers? I&apos;m all ears!
+    </Paragraph>
+    <Subtitle title="Email" />
+    <Paragraph>Please mail us at our official mail id.</Paragraph>
+
+    <Subtitle title="Social Media" />
+    <Paragraph>
+      You can also reach out to us on our social media handles.
+    </Paragraph>
+  </Main>;
+}
+```
