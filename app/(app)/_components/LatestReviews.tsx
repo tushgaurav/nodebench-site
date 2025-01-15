@@ -29,37 +29,41 @@ export function ArticleCard({
           <h3 className="text-lg font-semibold">{title}</h3>
         </Link>
         <p className="text-xs">By {author}</p>
-        <hr className="
+        <hr
+          className="
             border-t-2
             border-brand_orange/50
             w-1/4
             mt-2
             mb-2 
-        " />
+        "
+        />
         <p className="text-sm mt-1">{description}</p>
       </div>
     </div>
   );
 }
 
-export default function LatestArticles() {
+export default function LatestReviews() {
   return (
-    <section className="section-container p-6">
-      <h2 className="text-xl font-semibold mb-4">Latest Reviews</h2>
-      <div className="flex gap-6 flex-col md:flex-row md:mb-10">
-        {reviews.map((review) => {
-          return (
-            <ArticleCard
-              url={review.url}
-              key={review.url}
-              title={review.title}
-              description={review.description}
-              image={review.thumbnail}
-              author={review.authors[0].name}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <div className="bg-gradient-to-br from-brand_orange-light/50 to-brand_orange-light/10">
+      <section className="section-container p-6">
+        <h2 className="text-xl font-semibold mb-4">Latest Reviews</h2>
+        <div className="flex gap-6 flex-col md:flex-row md:mb-10">
+          {reviews.map((review) => {
+            return (
+              <ArticleCard
+                url={review.url}
+                key={review.url}
+                title={review.title}
+                description={review.description}
+                image={review.thumbnail}
+                author={review.authors[0].name}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </div>
   );
 }

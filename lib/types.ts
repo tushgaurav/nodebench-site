@@ -11,3 +11,13 @@ export type ReviewMetadata = {
     url: string;
     thumbnail: string;
 }
+
+export type ArticleMetadata = {
+    title: string;
+    description: string;
+    authors: Author[];
+    date: string;
+    url: string;
+    thumbnail: string;
+}
+
