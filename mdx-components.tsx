@@ -24,7 +24,9 @@ const components = {
         <h4 className="font-semibold text-base mt-4 mb-2" {...props} />
     ),
     p: (props: ParagraphProps) => (
-        <p className="text-gray-700 leading-relaxed mb-4 max-w-[92ch]" {...props}/>
+        <p className="text-gray-700 leading-relaxed mb-4 max-w-[92ch]" style={{
+            maxWidth: '720px',
+        }} {...props}/>
     ),
     ol: (props: ListProps) => (
         <ol className="list-decimal pl-8 mb-4 space-y-2" {...props} />
