@@ -10,6 +10,7 @@ const rl = readline.createInterface({
 
 const getMdxTemplate = (title: string, date: string) => `
 import Topbar from '../_components/Topbar.tsx'
+import {Content, MainContent, AsideContent, AuthorCard} from "../_components/Content.tsx"
 
 export const metadata = {
     title: '${title}',
@@ -30,11 +31,24 @@ export const articleInfo = {
     date='${date}'
 />
 
+
+<Content>
+
+<MainContent>
+
 # Summary
 This is a summary of the article.
 
 # Introduction
 nodebench is a tool to benchmark the performance of Node.js code. It is a simple and easy-to-use tool that can help you identify performance bottlenecks in your code.
+
+</MainContent>
+
+<AsideContent />
+
+</Content>
+
+<AuthorCard authorSlug="tushgaurav" />
 `;
 
 
@@ -70,6 +84,12 @@ const createArticleTemplate = async () => {
     }
 
     fs.writeFileSync(mdxPath, getMdxTemplate(title, date));
+
+    const imageDir = path.join(process.cwd(), 'public', 'images', 'articles', slug);
+    if (!fs.existsSync(imageDir)) {
+      fs.mkdirSync(imageDir, { recursive: true });
+    }
+
     console.log(`Created MDX file: ${mdxPath}`);
 
     console.log('\nArticle template created successfully! 🎉');
