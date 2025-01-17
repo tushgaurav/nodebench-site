@@ -1,5 +1,19 @@
 [
   {
+    "title": "Nvidia GeForce RTX 5000 Guide",
+    "url": "articles/nvidia-geforce-rtx-5000-guide",
+    "description": "A comprehensive overview of NVIDIA's groundbreaking RTX 5000 series, announced at CES.",
+    "date": "2025-01-18",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "type": "blog",
+    "thumbnail": "/images/articles/nvidia-geforce-rtx-5000-guide/thumbnail.png"
+  },
+  {
     "title": "Best of CES 2025",
     "url": "articles/best-of-ces-2025",
     "description": "My favorite products from CES 2025 showfloor.",
