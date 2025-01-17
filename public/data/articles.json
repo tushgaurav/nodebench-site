@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Best of CES 2025",
+    "url": "articles/best-of-ces-2025",
+    "description": "My favorite products from CES 2025 showfloor.",
+    "date": "17 Jan 2025",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "type": "blog",
+    "thumbnail": "/images/articles/best-of-ces-2025/thumbnail.png"
+  },
+  {
+    "title": "Where to find Home Assistant compatible IoT devices in India",
+    "url": "articles/finding-home-assistant-devices-in-india",
+    "description": "Nice.",
+    "date": "28 Dec 2024",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "type": "article",
+    "thumbnail": "/images/review/raspberry-pi-5/thumbnail.png"
+  }
+]

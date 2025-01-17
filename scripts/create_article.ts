@@ -18,6 +18,11 @@ export const metadata = {
     authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
 }
 
+export const articleInfo = {
+    type: 'blog',
+    thumbnail: "/images/articles/thumbnail.png"
+}
+
 <Topbar
     thumbnail='/images/articles/placeholder.png'
     title="${title}"
