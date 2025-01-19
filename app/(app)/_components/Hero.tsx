@@ -30,6 +30,9 @@ export default function Hero() {
                 src={heroImage}
                 alt="bunch of single board computers at a table"
                 className="object-cover w-full h-96"
+                priority
+                placeholder="blur"
+                quality={100}
             />
         </section>
     )

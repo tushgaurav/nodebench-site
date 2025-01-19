@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoveUpRight } from "lucide-react";
 import { Main, Subtitle, Title } from "@/components/ui/static-pages";
+import { format, formatDistanceToNow } from "date-fns";
 
 export const metadata: Metadata = {
   title: "Articles - nodebench",
@@ -76,22 +77,17 @@ function ArticleCard({
 }) {
     const author = authors[0];
   return (
-    <div className="py-2">
+    <Link href={url} className="bg-gray-200 group">
       <Image src={image} height={200} width={400} alt={title} />
-      <div>
-        <Link href={url}>
-        <h3 className="font-semibold text-lg pt-2">{title}</h3>
-        </Link>
-        <p className="text-sm">
-          By{" "}
-          <Link href={author.url}>
-            {author.name}
-          </Link>{" "}
-          on {new Date(date).toLocaleDateString()}
+      <hr className="border-brand_orange/60 border-b-4"/>
+      <div className="px-4 pt-3 pb-4">
+        <h3 className="font-semibold leading-5 text-lg group-hover:text-brand_orange">{title}</h3>
+        {/* <p className="text-sm mb-2">
+          By {author.name} • {format(new Date(date), 'dd MMMM yyyy')}
         </p>
-        <p className="mt-1">{description}</p>
+        <p className="leading-5">{description}</p> */}
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -99,40 +95,30 @@ function BlogCard({
   title,
   image,
   description,
-  authors,
   date,
   url,
 }: {
   title: string;
   image: string;
   description: string;
-  authors: {
-    name: string;
-    url: string;
-  }[];
   date: string;
   url: string;
 }) {
-    const author = authors[0];
   return (
-    <div className="py-2">
-      <Image src={image} height={200} width={400} alt={title} />
-      <div>
-        <h3 className="font-semibold text-lg pt-2">{title}</h3>
+    <Link href={url} className="bg-gray-200 group">
+      <Image src={image} height={200} width={1000} alt={title}  />
+      <hr className="border-brand_orange/60 border-b-4"/>
+      <div className="px-4 pt-2 pb-4">
+        <h3 className="font-semibold text-lg group-hover:text-brand_orange">{title}</h3>
         <p className="text-sm mb-2">
-          By{" "}
-          <Link href={author.url}>
-            {author.name}
-          </Link>{" "}
-          on {new Date(date).toLocaleDateString()}
+          {format(new Date(date), 'dd MMMM yyyy')} • {formatDistanceToNow(new Date(date)) + " ago"}
         </p>
-        <p>{description}</p>
-        
-        <Link href={url} className="bg-brand_orange-light py-2 px-4 inline-flex items-center justify-between gap-2 mt-2 text-zinc-800 text-sm">
-            Read more <MoveUpRight className="w-4 h-4" />
-        </Link>
+        <p className="leading-5">{description}</p>
+        {/* <Link href={url} className="bg-brand_orange/20 py-2 px-4 inline-flex items-center justify-between gap-2 text-black text-sm">
+            Read <MoveUpRight className="w-4 h-4" />
+        </Link> */}
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -157,7 +143,7 @@ export default function ArticlePage() {
             ))}
         </div>
 
-        <Subtitle subtitle="Latest Blogs" className="mt-12"/>
+        <Subtitle subtitle="Stay On the Cutting Edge" className="mt-12"/>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogs.map((article) => (
@@ -165,7 +151,6 @@ export default function ArticlePage() {
                     title={article.title}
                     image={article.thumbnail}
                     description={article.description}
-                    authors={article.authors}
                     date={article.date}
                     url={article.url}
                  />
