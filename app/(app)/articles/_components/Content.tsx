@@ -3,6 +3,7 @@
  * This was needed as to display the aside bar responsively
  * at the side of the main content.
  */
+
 import reviews from "@/public/data/reviews.json";
 import articles from "@/public/data/articles.json";
 import { Github, Globe } from "lucide-react";
@@ -17,12 +18,21 @@ export function MainContent({ children }: { children: React.ReactNode }) {
   return <div className="mb-12 md:mb-0">{children}</div>;
 }
 
-export function AsideContent({ children }: { children: React.ReactNode }) {
+export function Tldr({ children }: { children?: React.ReactNode }) {
+  return (
+    <div className="flex flex-col justify-between gap-6">
+      {children && <div className="h-min md:max-w-md md:ml-6 px-6 pb-6 bg-gray-200">{children}</div>}
+      <AsideContent />
+    </div>
+  );
+}
+
+export function AsideContent({ children }: { children?: React.ReactNode }) {
   const latestArticles = articles.slice(0, 2);
   const latestReviews = reviews.slice(0, 2);
 
   return (
-    <div className="flex-1 h-min mt-auto md:max-w-md p-6 pt-12 md:ml-6 mb-6 bg-red-100 space-y-8">
+    <div className="h-min mt-auto md:max-w-md p-6 pt-12 md:ml-6 mb-6 bg-gray-200 space-y-8">
       {children}
 
       <div>
@@ -30,7 +40,11 @@ export function AsideContent({ children }: { children: React.ReactNode }) {
         <hr className="border-t-2 border-brand_orange/50 mt-1 mb-2" />
         {latestArticles.map((article) => {
           return (
-            <Link href={"/" + article.url} key={article.url} className="py-2 group inline-block">
+            <Link
+              href={"/" + article.url}
+              key={article.url}
+              className="py-2 group inline-block"
+            >
               <Image
                 height={800}
                 width={600}
@@ -39,7 +53,9 @@ export function AsideContent({ children }: { children: React.ReactNode }) {
                 className="w-full h-20 object-cover"
               />
               <div>
-                <h3 className="font-semibold mt-1 group-hover:text-brand_orange transition-colors duration-300">{article.title}</h3>
+                <h3 className="font-semibold mt-1 group-hover:text-brand_orange transition-colors duration-300">
+                  {article.title}
+                </h3>
                 <hr className="border-t-2 border-brand_orange/50 w-1/6 my-1" />
                 <p className="text-sm mt-1">{article.description}</p>
               </div>
@@ -53,7 +69,11 @@ export function AsideContent({ children }: { children: React.ReactNode }) {
         <hr className="border-t-2 border-brand_orange/50 mt-1 mb-2" />
         {latestReviews.map((review) => {
           return (
-            <Link href={"/" + review.url} key={review.url} className="py-2 group inline-block">
+            <Link
+              href={"/" + review.url}
+              key={review.url}
+              className="py-2 group inline-block"
+            >
               <Image
                 height={800}
                 width={600}
@@ -62,7 +82,9 @@ export function AsideContent({ children }: { children: React.ReactNode }) {
                 className="w-full h-20 object-cover"
               />
               <div>
-                <h3 className="font-semibold mt-1 group-hover:text-brand_orange transition-colors duration-300">{review.title}</h3>
+                <h3 className="font-semibold mt-1 group-hover:text-brand_orange transition-colors duration-300">
+                  {review.title}
+                </h3>
                 <hr className="border-t-2 border-brand_orange/50 w-1/6 my-1" />
                 <p className="text-sm mt-1">{review.description}</p>
               </div>
@@ -99,12 +121,12 @@ export function AuthorCard({ authorSlug }: { authorSlug: currentAuthor }) {
 
   return (
     <div className="mt-10">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-center gap-4">
         <Image
           src={author.avatar}
           height={100}
           width={100}
-          className="object-cover rounded-full"
+          className="object-cover rounded-full mr-auto sm:mr-0"
           alt={author.name}
         />
         <div>
