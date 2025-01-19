@@ -119,3 +119,78 @@ export default function ContactPage() {
   </Main>;
 }
 ```
+
+### Style Guide
+
+This project uses Tailwind CSS for styling. You can find the Tailwind CSS style guide [here](https://tailwindcss.com/docs).
+
+Here are some additional guidelines:
+
+#### Cards
+![Card Example](docs/images/cards.png)
+The background of the cards is gray-200. The padding is 4.
+
+
+## Articles
+
+The articles are written in Markdown but you are free to use any valid JSX in the markdown file. The articles are in the app/(app)/articles/ directory. Each article has its own directory with a page.mdx file, you can create this file using the `npm run new-article` command. This command will also create a image folder in the public/articles directory with the same name as the article directory. You should put all images you want to use in page.mdx file here.
+
+There are some components which are automatically added in the page.mdx file.
+
+- Next.js Metadata - This is the standard metadata for the page. This is also used for creating metadata for articles in the public/data/articles.json file.
+
+- articleInfo - This is the metadata for the article. This is used to create the article card in the homepage. It takes the following props:
+  - type - The type of the article. This is used to filter the articles in the homepage. There are two types, 'blog' and 'article'. This is used to filter articles for search and other pages.
+  - thumbnail - The thumbnail of the article.
+
+- Topbar - This component is used to display the topbar of the article. It takes the following props:
+  - thumbnail - The thumbnail of the article.
+  - title - The title of the article.
+  - author - The author of the article.
+  - date - The date of the article.
+
+- Content - This is the main content wrapper. It wraps the MainContent and Tldr components. This is mainly for layout purposes.
+  - MainContent - This is the main content of the article. This is where you should put the main content of the article.
+  - Tldr - This is the TLDR of the article. This is displayed along side the main content in the article card. This component also has links and cards for other articles and reviews.
+
+- AuthorCard - This is the author card of the article. It takes the following props:
+  - authorSlug - The slug of the author. The author data is defined in app\(app)\articles\_components\Content.tsx
+
+#### Example Structure of an Article
+```mdx
+import Topbar from '../_components/Topbar.tsx'
+import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
+
+export const metadata = {
+    title: 'Nvidia GeForce RTX 5000 Guide',
+    description: "A comprehensive overview of NVIDIA's groundbreaking RTX 5000 series, announced at CES.",
+    date: '2025-01-18',
+    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+}
+
+export const articleInfo = {
+    type: 'blog',
+    thumbnail: "/images/articles/nvidia-geforce-rtx-5000-guide/thumbnail.png"
+}
+
+<Topbar
+    thumbnail='/images/articles/nvidia-geforce-rtx-5000-guide/thumbnail.png'
+    title="Nvidia GeForce RTX 5000 Guide"
+    author='Tushar Gaurav'
+    date='2025-01-17'
+/>
+
+<Content>
+
+<MainContent>
+Main content of the article goes here.
+</MainContent>
+
+<Tldr>
+This is the TLDR of the article.
+</Tldr>
+
+</Content>
+
+<AuthorCard authorSlug="tushgaurv" />
+```
