@@ -2,7 +2,6 @@ import fs from "fs";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MoveUpRight } from "lucide-react";
 import { Main, Subtitle, Title } from "@/components/ui/static-pages";
 import { format, formatDistanceToNow } from "date-fns";
 
@@ -60,22 +59,12 @@ const articles = getArticlesMetadata();
 function ArticleCard({
   title,
   image,
-  description,
-  authors,
-  date,
   url,
 }: {
   title: string;
   image: string;
-  description: string;
-  authors: {
-    name: string;
-    url: string;
-  }[];
-  date: string;
   url: string;
 }) {
-    const author = authors[0];
   return (
     <Link href={url} className="bg-gray-200 group">
       <Image src={image} height={200} width={400} alt={title} />
@@ -135,9 +124,6 @@ export default function ArticlePage() {
                 <ArticleCard key={article.url} 
                     title={article.title}
                     image={article.thumbnail}
-                    description={article.description}
-                    authors={article.authors}
-                    date={article.date}
                     url={article.url}
                  />
             ))}
