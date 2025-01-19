@@ -1,5 +1,19 @@
 [
   {
+    "title": "TikTok is now banned in US",
+    "url": "articles/tiktok-is-now-banned-in-us",
+    "description": "TikTok, the popular social media platform, faces a complete ban in the United States following new federal legislation.",
+    "date": "2025-01-19",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "type": "blog",
+    "thumbnail": "/images/articles/tiktok-is-now-banned-in-us/thumbnail.png"
+  },
+  {
     "title": "Nvidia GeForce RTX 5000 Guide",
     "url": "articles/nvidia-geforce-rtx-5000-guide",
     "description": "A comprehensive overview of NVIDIA's groundbreaking RTX 5000 series, announced at CES.",
