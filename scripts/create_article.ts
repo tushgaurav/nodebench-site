@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 
 const getMdxTemplate = (title: string, date: string) => `
 import Topbar from '../_components/Topbar.tsx'
-import {Content, MainContent, AsideContent, AuthorCard} from "../_components/Content.tsx"
+import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
 
 export const metadata = {
     title: '${title}',
@@ -44,7 +44,11 @@ nodebench is a tool to benchmark the performance of Node.js code. It is a simple
 
 </MainContent>
 
-<AsideContent />
+<Tldr>
+### TL;DR
+This is a TLDR section.
+
+</Tldr>
 
 </Content>
 
