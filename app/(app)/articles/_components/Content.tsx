@@ -1,3 +1,6 @@
+"use client"
+import { usePathname } from 'next/navigation'
+
 /**
  * Wrapper for the main content of the page
  * This was needed as to display the aside bar responsively
@@ -28,13 +31,15 @@ export function Tldr({ children }: { children?: React.ReactNode }) {
 }
 
 export function AsideContent({ children }: { children?: React.ReactNode }) {
-  const latestArticles = articles.slice(0, 2);
+  const currentUrl = usePathname().slice(1);
+  
+  const latestArticles = articles.filter((article) => article.url != currentUrl).slice(0, 2);
   const latestReviews = reviews.slice(0, 2);
+
 
   return (
     <div className="h-min mt-auto md:max-w-md p-6 pt-12 md:ml-6 mb-6 bg-gray-200 space-y-8">
       {children}
-
       <div>
         <h3 className="text-lg font-semibold">Latest Articles</h3>
         <hr className="border-t-2 border-brand_orange/50 mt-1 mb-2" />

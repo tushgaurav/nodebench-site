@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { format } from "date-fns";
 
 export default function Topbar({
   thumbnail,
@@ -15,25 +16,23 @@ export default function Topbar({
 }) {
   return (
     <div className="mb-4">
-      <div className="pt-2 pb-4">
-        <hr className=" w-full bg-brand_orange-light/60 h-2" />
-      </div>
       <h1 className="font-bold text-2xl track">{title}</h1>
-      <div className="text-sm mt-2 flex items-baseline gap-1">
+      <hr className="mt-2 w-full bg-brand_orange-light h-1" />
+      <div className="text-sm mt-1 flex items-baseline gap-1">
         <h5>
-          <span className="font-bold">By </span>
-          {author} on
+          By {author} on
         </h5>
-        <h5 className="font-bold">{date}</h5>
+        <h5 className="mt-1">
+          {format(new Date(date), "dd MMMM yyyy")}
+        </h5>
       </div>
-      <hr className="h-[1px] mt-4 bg-brand_orange-light" />
 
       <Image
         src={thumbnail}
         alt={title}
         width={1200}
         height={400}
-        className="rounded-lg mt-4"
+        className="my-6"
       />
       {thumbnailCaption && (
         <p
