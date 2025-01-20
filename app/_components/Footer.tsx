@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <div className="text-sm container max-w-7xl mx-auto">
-            <div className="flex justify-between items-center">
-                <Image src="/images/logo.png" alt="nodebench" width={160} height={200} />
+            <div className="flex justify-between items-center flex-wrap">
+                <Image src="/images/logo.png" alt="nodebench" className="mb-10" width={160} height={200} />
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 mb-10">
                     <Link href="https://twitter.com/nodebench" target="__blank">
                         <Image src="/images/icons/x.svg" alt="Twitter" width={24} height={24} />
                     </Link>
@@ -23,7 +23,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="flex items-baseline py-4 gap-4 mt-2">
+            <div className="flex items-baseline flex-wrap py-4 gap-4">
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
                 <Link href="/ethics-statement">Ethics Statement</Link>
@@ -37,7 +37,7 @@ export default function Footer() {
                 </p>
             </div>
 
-            <div className="flex items-baseline py-4 justify-between mt-6">
+            <div className="flex items-baseline flex-wrap py-4 justify-between mt-6">
                 <p>&copy; {new Date().getFullYear()} nodebench. All rights reserved.</p>
                 <ul className="flex gap-2">
                     <li>
