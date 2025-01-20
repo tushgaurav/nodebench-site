@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-
-     "new-article": "npx tsx ./scripts/create_article.ts"
+    "new-article": "npx tsx ./scripts/create_article.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -28,6 +27,7 @@
     "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.3",
+    "embla-carousel-react": "^8.5.2",
     "lucide-react": "^0.469.0",
     "motion": "^11.15.0",
     "next": "15.1.2",

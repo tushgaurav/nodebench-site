@@ -46,8 +46,8 @@ export function ArticleCard({
 
 export default function LatestReviews() {
   return (
-    <div className="bg-gradient-to-br from-brand_orange-light/50 to-brand_orange-light/10">
-      <section className="section-container p-6">
+    <div className="bg-gradient-to-br from-brand_orange-light/30 to-transparent">
+      <section className="section-container p-6 lg:pt-8">
         <h2 className="text-xl font-semibold mb-4">Latest Reviews</h2>
         <div className="flex gap-6 flex-col md:flex-row md:mb-10">
           {reviews.map((review) => {
