@@ -32,7 +32,7 @@ export default function Hero() {
                 className="object-cover w-full h-96"
                 priority
                 placeholder="blur"
-                quality={100}
+                quality={50}
             />
         </section>
     )
