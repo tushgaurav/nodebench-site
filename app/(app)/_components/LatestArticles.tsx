@@ -24,7 +24,7 @@ export function ArticleCard({
   date: string;
 }) {
   return (
-    <div className="flex flex-col bg-brand_orange-light/20 min-w-80 h-full border-2 border-brand_orange/80 group">
+    <div className="flex flex-col bg-brand_orange-light/20 sm:min-w-80 h-full border-2 border-brand_orange/80 group">
       <Image
         src={image}
         alt={title}
