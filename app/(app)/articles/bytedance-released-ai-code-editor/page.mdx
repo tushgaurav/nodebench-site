@@ -1,0 +1,68 @@
+
+import Topbar from '../_components/Topbar.tsx'
+import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
+
+export const metadata = {
+    title: 'ByteDance Released AI Code Editor',
+    description: "ByteDance recently launched Trae, a new AI-powered IDE that's generating buzz in the developer community.",
+    date: '2025-01-23',
+    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+}
+
+export const articleInfo = {
+    type: 'blog',
+    thumbnail: "/images/articles/bytedance-released-ai-code-editor/thumbnail.png",
+}
+
+<Topbar
+    thumbnail='/images/articles/bytedance-released-ai-code-editor/thumbnail.png'
+    title="ByteDance Released AI Code Editor"
+    author='Tushar Gaurav'
+    date='2025-01-23'
+/>
+
+
+<Content>
+
+<MainContent>
+TikTok's parent company ByteDance has released their own AI-powered code editor called Trae. It is developed by ByteDance's Singapore-based subsidiary SPRING(SG)PTE.LTD. The editor is available to download from their website. Currently, it's only available for macOS, though they offer a waitlist for Windows users.
+
+# First Looks
+The installation process is very straight forward, you just download and install the app. When you open the app it prompts you to sign up. It also asks you to import settings from either VS Code or Cursor. There is no paywall associated right now.
+
+![Trae Screenshot](/images/articles/bytedance-released-ai-code-editor/trae.png)
+
+At first glance, it looks quite different. Although Trae is a VS Code fork, it doesn't look like one unlike Cursor, where you can easily tell it's VS Code at its core. Trae looks very similar to JetBrains Fleet, here's how it looks if you haven't used it
+
+![JetBrains Fleet Screenshot](/images/articles/bytedance-released-ai-code-editor/fleet.png)
+
+In my opinion, it looks very elegant, The panes are separated nicely and the small sidebar at the left looks thoughtfully placed. I am impressed by the design of the editor, it’s one of the better looking VS Code clones.
+
+# AI Capabilities
+Trae uses Anthropic’s Claude 3.5 Sonnet and OpenAI’s GPT 4o models. It has all the features that you expect from a AI code editor such as Chat, Auto Code Completions, File Contexts, Auto File Editors etc. The feature set is quite similar to what Cursor offers.
+
+The model integration works well. When prompted to complete a file, Trae intelligently asks follow-up questions if it needs more information, and it occasionally pauses to think and refine its approach. The editor also includes built-in image support—you can provide a screenshot and ask it to mock up the UI, similar to Vercel's v0 functionality.
+
+# It's Free, for now at least
+Currently, Trae is completely free to use with no pricing model in place. The editor offers unlimited access to premium AI models like Claude 3.5 Sonnet and GPT-4o at no cost making it the only free way to access these models. Given how expensive these models are to run, ByteDance must be investing significantly in the platform.
+
+# Should you switch?
+Trae is owned by ByteDance and it’s based in China. You should only use at your own risk, I don’t know what data is ByteDance is collecting. It also offers Chinese and English language support. The AI assistance also seems more predictable than other tools. If you are a fan of JetBrains Fleet, you should definitely give it a try.
+
+But if you're already comfortable with Cursor and don't need the bilingual support, the switch might not offer enough benefits to justify the switch to Trae.
+
+
+</MainContent>
+
+<Tldr>
+### TL;DR
+
+- **ByteDance's Trae**  
+  New AI code editor with Fleet-like interface
+
+- Unlimited access to **Claude 3.5 Sonnet and GPT-4o** models for AI features.
+</Tldr>
+
+</Content>
+
+<AuthorCard authorSlug="tushgaurav" />
