@@ -16,15 +16,15 @@ export function ArticleCard({
   author: string;
 }) {
   return (
-    <div className="flex flex-col bg-brand_orange-light/30 p-4 max-w-80 border-2 border-brand_orange/50">
+    <div className="flex flex-col bg-brand_orange-light/30 max-w-md border-2 border-brand_orange/80">
       <Image
         src={image}
         alt={title}
         height={100}
         width={100}
-        className="w-full border-2 border-brand_orange/50 h-40 object-cover"
+        className="w-full h-40 object-cover"
       />
-      <div className="mt-2">
+      <div className="p-4">
         <Link href={url}>
           <h3 className="text-lg font-semibold">{title}</h3>
         </Link>
