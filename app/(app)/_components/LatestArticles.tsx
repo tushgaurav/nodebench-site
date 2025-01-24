@@ -50,7 +50,7 @@ export default function LatestArticles() {
     .sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     })
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <div className="bg-gradient-to-br from-brand_orange-light/50 to-brand_orange-light/10">
