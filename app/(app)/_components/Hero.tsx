@@ -18,7 +18,7 @@ export default function Hero() {
                             duration: 0.8,
                             ease: "easeOut"
                         }}
-                        className="tracking-tighter text-5xl md:text-7xl font-bold bg-gradient-to-b from-orange-900 to-black bg-clip-text text-transparent"
+                        className="tracking-tighter text-5xl md:text-7xl animate-text  md:bg-gradient-to-b from-orange-900 to-black bg-clip-text md:text-transparent font-semibold md:font-black"
                     >
                         Real Performance <br />
                         Real Results
@@ -29,7 +29,7 @@ export default function Hero() {
             <Image
                 src={heroImage}
                 alt="bunch of single board computers at a table"
-                className="object-cover w-full h-96"
+                className="object-cover w-full h-96 "
                 priority
                 placeholder="blur"
                 quality={50}
