@@ -1,0 +1,73 @@
+
+import Topbar from '../_components/Topbar.tsx'
+import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
+
+export const metadata = {
+    title: 'Raspberry Pi 5 16GB Launched',
+    description: 'The Raspberry Pi 5 now offers a 16GB RAM variant at $120, though for most users the 4GB model remains the best value proposition given competing alternatives like Intel N100 mini PCs.',
+    date: '2025-01-24',
+    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+}
+
+export const articleInfo = {
+    type: 'blog',
+    thumbnail: "/images/articles/raspberry-pi-5-16gb-launched/thumbnail.png"
+}
+
+<Topbar
+    thumbnail='/images/articles/raspberry-pi-5-16gb-launched/thumbnail.png'
+    title="Raspberry Pi 5 16GB Launched"
+    author='Tushar Gaurav'
+    date='2025-01-24'
+/>
+
+
+<Content>
+
+<MainContent>
+
+Raspberry Pi 5 was launched in 2023 with two memory configurations 4GB and 8GB. Last year they released a 2GB model and now we have the 16GB variant available.
+
+The 16GB variant was released on 9th Jan and its priced at $120. Unlike last few launches, this time its available in India at around ₹12,000 on Silverline Electronics and around ₹12,500 on Robu, but should you buy it?
+
+# That’s a lot of RAM
+
+This 16GB model is possible due to the new optimized D0 stepping of the Pi’s Broadcom BCM2712 processor which included support for memory capacities larger than 8GB. Also, the memory maker Micron has supplied a single package which has eight of their 16Gbit LPDDR4X die making the 16GB RAM to be placed on a single chip.
+
+![Raspberry Pi 5 16GB](/images/articles/raspberry-pi-5-16gb-launched/pi16gb-2.webp)
+
+Also, Raspberry Pi changed the previous resistor RAM indicator to a simple print next to the model number.
+
+![Pervious RAM Indicator](/images/articles/raspberry-pi-5-16gb-launched/ram-indicator.png)
+This was the previous RAM indicator, a simple resistor next to the model number.
+
+# Use Cases
+
+But what’s the use case of the 16GB RAM?  Most people would find 16GB RAM on a Pi useless but there are some special use cases such as running multiple docker images or services on a single Pi rather than having a separate Pi for each service. 
+
+You could now even run LLMs with more than 8 billion albeit at slow speeds. The Llama2 13b is able to run at 1.36 tokens per second.
+
+If you are into hosting website or web services on your Pi (for some reason), you could now service more clients or host more than one web application at the same time.
+
+# Alternatives
+
+At the price of $120, there are full blown x86 Intel N100 mini PCs available and that’s not considering what you could get in the second hand market.
+
+![Mini PC](/images/articles/raspberry-pi-5-16gb-launched/minipc.png)
+
+I was able to find this refurbished one for around ₹9,900 on Amazon, this would be more performant, better support, more IO, and come with a 512 SSD and that a great value.
+
+Don’t get me wrong, I am glad that the 16GB variant exists and people could buy it but that being said it’s not for everyone. The sweet spot is the 4GB variant for most people for around $60 or ₹6000.
+
+
+</MainContent>
+
+<Tldr>
+### TL;DR
+Raspberry Pi launched a 16GB variant of the Pi 5 for $120. It’s available in India for around ₹12,000. This product is not for everyone and the 4GB variant is the sweet spot for most people.
+
+</Tldr>
+
+</Content>
+
+<AuthorCard authorSlug="tushgaurav" />

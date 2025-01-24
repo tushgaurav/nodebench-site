@@ -1,5 +1,19 @@
 [
   {
+    "title": "Raspberry Pi 5 16GB Launched",
+    "url": "articles/raspberry-pi-5-16gb-launched",
+    "description": "The Raspberry Pi 5 now offers a 16GB RAM variant at $120, though for most users the 4GB model remains the best value proposition given competing alternatives like Intel N100 mini PCs.",
+    "date": "2025-01-24",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "type": "blog",
+    "thumbnail": "/images/articles/raspberry-pi-5-16gb-launched/thumbnail.png"
+  },
+  {
     "title": "ByteDance Released AI Code Editor",
     "url": "articles/bytedance-released-ai-code-editor",
     "description": "ByteDance recently launched Trae, a new AI-powered IDE that's generating buzz in the developer community.",
