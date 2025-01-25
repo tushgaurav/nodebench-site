@@ -8,11 +8,6 @@ import { format, formatDistanceToNow } from "date-fns";
 export const metadata: Metadata = {
   title: "Articles - nodebench",
   description: "The latest articles about tech, hardware, and software. We have the latest news, reviews, and guides.",
-  openGraph: {
-    title: "Articles - nodebench",
-    description: "The latest articles about tech, hardware, and software. We have the latest news, reviews, and guides.",
-    type: "website"
-  }
 };
 
 
@@ -29,9 +24,9 @@ function getArticlesMetadata() {
   const reviews = pages
     .map((page) => {
       try {
-        const { metadata } = require(`./${page}/page.mdx`);
+        const { generateMetadata } = require(`./${page}/page.mdx`);
         const { articleInfo } = require(`./${page}/page.mdx`);
-
+        const metadata = generateMetadata();
         return {
           title: metadata.title,
           url: `articles/${page}`,

@@ -1,12 +1,21 @@
 
 import Topbar from '../_components/Topbar.tsx'
-import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
+import { Content, MainContent, Tldr, AuthorCard } from "../_components/Content.tsx"
 
-export const metadata = {
-    title: 'ByteDance Released AI Code Editor',
-    description: "ByteDance recently launched Trae, a new AI-powered IDE that's generating buzz in the developer community.",
-    date: '2025-01-23',
-    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'ByteDance Released AI Code Editor',
+        description: 'ByteDance recently launched Trae, a new AI-powered IDE that\'s generating buzz in the developer community.',
+        date: '2025-01-23',
+        authors: [{ name: "Tushar Gaurav", url: "https://tushgaurav.in" }],
+    }
+
+    return {
+        ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        }
+    }
 }
 
 export const articleInfo = {

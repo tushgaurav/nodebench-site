@@ -2,11 +2,20 @@
 import Topbar from '../_components/Topbar.tsx'
 import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
 
-export const metadata = {
-    title: 'Raspberry Pi 5 16GB Launched',
-    description: 'Raspberry Pi 5 now offers a 16GB RAM variant at $120, though for most users the 4GB model remains the best value.',
-    date: '2025-01-24',
-    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'Raspberry Pi 5 16GB Launched',
+        description: 'Raspberry Pi 5 now offers a 16GB RAM variant at $120, though for most users the 4GB model remains the best value.',
+        date: '2025-01-24',
+        authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+    }
+
+    return {
+     ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        } 
+    }
 }
 
 export const articleInfo = {

@@ -1,11 +1,20 @@
 import Topbar from '../_components/Topbar.tsx'
 import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
 
-export const metadata = {
-    title: 'Best of CES 2025',
-    description: 'My favorite products from CES 2025 showfloor.',
-    date: '17 Jan 2025',
-    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'Best of CES 2025',
+        description: 'My favorite products from CES 2025 showfloor.',
+        date: '2025-01-17',
+        authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+    }
+
+    return {
+        ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        }
+    }
 }
 
 export const articleInfo = {

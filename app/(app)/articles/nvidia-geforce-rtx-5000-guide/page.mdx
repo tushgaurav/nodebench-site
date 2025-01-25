@@ -1,11 +1,20 @@
 import Topbar from '../_components/Topbar.tsx'
 import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
 
-export const metadata = {
-    title: 'Nvidia GeForce RTX 5000 Guide',
-    description: "A comprehensive overview of NVIDIA's groundbreaking RTX 5000 series, announced at CES.",
-    date: '2025-01-18',
-    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'Nvidia GeForce RTX 5000 Guide',
+        description: "A comprehensive overview of NVIDIA'.s groundbreaking RTX 5000 series, announced at CES.",
+        date: '2025-01-18',
+        authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+    }
+
+    return {
+       ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        } 
+    }
 }
 
 export const articleInfo = {

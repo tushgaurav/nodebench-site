@@ -1,11 +1,19 @@
 import Topbar from '../_components/Topbar.tsx'
 
-export const metadata = {
-    title: 'Where to find Home Assistant compatible IoT devices in India',
-    description: 'Nice.',
-    date: '28 Dec 2024',
-    authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
-   
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'Where to find Home Assistant compatible IoT devices in India',
+        description: 'Nice.',
+        date: '28 Dec 2024',
+        authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+    }
+
+    return {
+     ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        } 
+    }
 }
 
 export const articleInfo = {
