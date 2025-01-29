@@ -41,14 +41,14 @@ export function AsideContent({ children }: { children?: React.ReactNode }) {
     <div className="h-min mt-auto md:max-w-md p-6 pt-12 md:ml-6 mb-6 bg-gray-200 space-y-8">
       {children}
       <div>
-        <h3 className="text-lg font-semibold">Latest Articles</h3>
+        <h3 className="text-lg font-semibold">Read More</h3>
         <hr className="border-t-2 border-brand_orange/50 mt-1 mb-2" />
         {latestArticles.map((article) => {
           return (
             <Link
               href={"/" + article.url}
               key={article.url}
-              className="py-2 group inline-block"
+              className="py-4 group inline-block"
             >
               <Image
                 height={800}
@@ -77,7 +77,7 @@ export function AsideContent({ children }: { children?: React.ReactNode }) {
             <Link
               href={"/" + review.url}
               key={review.url}
-              className="py-2 group inline-block"
+              className="py-4 group inline-block"
             >
               <Image
                 height={800}
