@@ -27,45 +27,35 @@ export default function SearchBar() {
     const [searchString, setSearchString] = useState<string>("")
 
     return (
-        <div className="flex items-center">
-            <div className="relative md:w-80">
-                <Input type="text" placeholder="" className="pl-8 rounded-none bg-zinc-100" value={searchString} onChange={(e) => {
-                    setSearchString(e.target.value)
-                }} />
-                {
-                    searchString.length > 0 && (
-                        <div className="absolute z-10 top-9 w-80 bg-gray-100 shadow-lg">
-                            {searchFromMetadata(searchString, reviews, articles).map((review) => {
-                                return (
-                                    <Link href={review.url} key={review.url}>
-                                        <div className="p-4 hover:bg-orange-200 border-b-2">
-                                        <h3 className="text-sm font-semibold">{review.title}</h3>
-                                        <p className="text-xs">{review.description}</p>
-                                        </div>
-                                    </Link>
-                                )
-                            })}
-                        </div>
-                    )
-                }
-                <Search className="absolute left-2.5 top-2.5 w-4 h-4 text-gray-400 dark:text-gray-600" />
-            </div>
-            <button className="flex items-center gap-2 bg-brand_orange px-6 py-2 hover:bg-opacity-90 transition-colors">
-                <span className="text-sm font-bold text-white">Search</span>
-            </button>
-            {/* {searchString.length > 0 && (
-                <div className="absolute top-12 w-80 bg-white rounded-lg shadow-lg">
-                    {searchFromMetadata(searchString, reviews).map((review: any) => {
-                        return (
-                            <div key={review.url} className="p-4 border-b border-gray-200">
-                                <h3 className="text-lg font-semibold">{review.title}</h3>
-                                <p className="text-sm">{review.description}</p>
-                            </div>
-                        )
-                    
-                    })}
+        <div className="flex flex-col items-center w-full">
+            <div className="relative w-full max-w-2xl">
+                <div className="flex items-center bg-white rounded-full shadow-xl hover:shadow-2xl transition-shadow">
+                    <Search className="absolute left-6 w-5 h-5 text-gray-400" />
+                    <Input 
+                        type="text" 
+                        placeholder="Search benchmarks, reviews, and articles..." 
+                        className="w-full pl-16 pr-4 py-4 text-lg border-none rounded-l-full focus:ring-0 focus:outline-none focus-visible:ring-0" 
+                        value={searchString} 
+                        onChange={(e) => setSearchString(e.target.value)} 
+                    />
+                    <button className="px-8 py-4 bg-brand_orange hover:bg-opacity-90 transition-colors rounded-r-full">
+                        <span className="text-white font-medium">Search</span>
+                    </button>
                 </div>
-            )} */}
+                
+                {searchString.length > 0 && (
+                    <div className="absolute z-10 w-full mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100">
+                        {searchFromMetadata(searchString, reviews, articles).map((result) => (
+                            <Link href={result.url} key={result.url}>
+                                <div className="p-4 hover:bg-gray-50 text-left transition-colors first:rounded-t-2xl last:rounded-b-2xl">
+                                    <h3 className="text-base font-medium text-gray-900">{result.title}</h3>
+                                    <p className="mt-1 text-sm text-gray-500">{result.description}</p>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

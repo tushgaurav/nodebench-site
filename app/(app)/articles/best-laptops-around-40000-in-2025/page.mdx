@@ -1,0 +1,91 @@
+import Topbar from '../_components/Topbar.tsx'
+import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
+
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'Best laptops around ₹40,000 in 2025',
+        description: 'Find the best laptop under ₹40,000 for your needs, these are our recommendations for each category.',
+        date: '2025-04-05',
+        authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+    }
+
+    return {
+        ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        }
+    }
+}
+
+export const articleInfo = {
+    type: 'blog',
+    thumbnail: "/images/articles/thumbnail.png"
+}
+
+<Topbar
+    thumbnail='/images/articles/placeholder.png'
+    title="Best laptops around ₹40,000 in 2025"
+    author='Tushar Gaurav'
+    date='2025-04-05'
+/>
+
+<Content>
+
+<MainContent>
+
+Find the best laptop under ₹40,000 for your needs, these are our recommendations for each category.
+
+### What is the bare minimum specifications required?
+
+When shopping for a laptop in this price range, here are the minimum specifications you should look for:
+
+- **RAM**: At least 8 GB of RAM is essential for smooth multitasking and running modern applications. While 4 GB might work for very basic tasks, it will feel sluggish with multiple browser tabs or applications open.
+
+- **Processor**: Look for at least a 12th gen Intel Core i3 or AMD Ryzen 3 5000 series. These modern processors provide good performance for everyday computing tasks.
+
+- **Storage**: A minimum 256 GB SSD is recommended over traditional hard drives. SSDs provide much faster boot times and application loading speeds. Avoid laptops with only HDDs if possible.
+
+- **Display**: Full HD (1920x1080) resolution should be the minimum for a comfortable viewing experience.
+
+- **Battery**: Look for at least a 40 Whr battery which should provide 4-5 hours of regular use. Larger batteries are better if portability is important to you.
+
+These specifications will ensure your laptop remains usable for the next few years and can handle common tasks like web browsing, document editing, and light multitasking without frustrating slowdowns.
+
+# Best All Rounder
+
+## Acer Aspire 3 
+
+![Acer Aspire 3](/images/articles/best-laptops-around-40000-in-2025/acer-aspire-3.png)
+
+This comes with Intel Core i5 1235U, 16 GB of DDR4 RAM and 1 TB NVMe SSD, which is more than sufficient for everyday tasks and even light casual gaming. It has a 14" IPS Full HD display with 45% NTSC color gamut, the color accuracy is not great but you can't complain at this price point. This laptop weighs 1.45 Kg. It comes with Wi-Fi 6 and Backlit Keyboard.
+
+This is a solid contender for the best laptop under this price point and if I have to recommend one a single laptop this would be it.
+
+## Dell Inspiron 3530
+
+![Dell Inspiron](/images/articles/best-laptops-around-40000-in-2025/dell.png)
+
+It comes with a 13th gen Intel Core i3 1205U processor with 8GB DDR4 RAM and a 512GB NVMe SSD. The display is 15.6" Full HD 120Hz which is quite surprising at this price point. It weighs 1.62 Kg. It has a 41 watt hour battery.
+
+If your budget is a on a little lower side then you should go with this laptop, at the price bracket of ₹35,000 this is a no brainer.
+
+## MSI Modern 14
+
+![MSI Modern 14](/images/articles/best-laptops-around-40000-in-2025/msi.webp)
+
+The MSI Modern 14 comes with a 12th gen i5 1235U processor with 16 GB DDR4 RAM and 512 GB NVMe SSD. The display is 14" Full HD display. It weighs about 1.4Kg. It comes with a backlit keyboard and in our opinion this is the best looking laptop in this list.
+
+This is a good laptop in this price range. The only problem being is that MSI does not offer on site warranties.
+
+</MainContent>
+
+<Tldr>
+### TL;DR
+- Acer Aspire 3 is the best all-rounder with i5 12th gen, 16GB RAM, 1TB SSD
+- Dell Inspiron 3530 offers great value at ₹35,000 with i3 13th gen, 8GB RAM
+- MSI Modern 14 has great specs but limited warranty support
+</Tldr>
+
+</Content>
+
+<AuthorCard authorSlug="tushgaurav" />

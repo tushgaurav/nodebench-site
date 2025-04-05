@@ -5,13 +5,11 @@ export default function Topbar({
   thumbnail,
   thumbnailCaption,
   title,
-  author,
   date,
 }: {
   thumbnail: string;
   thumbnailCaption?: string;
   title: string;
-  author: string;
   date: string;
 }) {
   return (

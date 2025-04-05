@@ -1,39 +1,47 @@
 "use client"
-
 import { motion } from "motion/react"
 import SearchBar from "@/app/_components/SearchBar";
-import Image from "next/image";
-
-import heroImage from "./images/hero.png"
 
 export default function Hero() {
     return (
-        <section className="relative">
-            <div className="section-container px-6">
-                <div className="absolute px-4 py-16  flex flex-col justify-between h-full  ">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ 
-                            duration: 0.8,
-                            ease: "easeOut"
-                        }}
-                        className="tracking-tighter text-5xl md:text-7xl animate-text  md:bg-gradient-to-b from-orange-900 to-black bg-clip-text md:text-transparent font-semibold md:font-black"
-                    >
-                        Real Performance <br />
-                        Real Results
-                    </motion.h1>
-                    <SearchBar />
+        <section className="relative h-screen w-full">
+            <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute top-0 left-0 w-full h-full object-cover"
+            >
+                <source src="/edit.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            
+            <div className="absolute inset-0 bottom-20 bg-gradient-to-b from-black/30 to-black/70">
+                <div className="section-container px-6 h-full flex flex-col justify-center items-center">
+                    <div className="md:max-w-6xl text-center space-y-12">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ 
+                                duration: 0.8,
+                                ease: "easeOut"
+                            }}
+                            className="tracking-tight text-4xl md:text-5xl lg:text-8xl font-black text-white drop-shadow-lg"
+                        >
+                            Real Performance <br />
+                            <span className="text-red-500">Real Results</span>
+                        </motion.h1>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.8 }}
+                            className="w-full max-w-2xl mx-auto"
+                        >
+                            <SearchBar />
+                        </motion.div>
+                    </div>
                 </div>
             </div>
-            <Image
-                src={heroImage}
-                alt="bunch of single board computers at a table"
-                className="object-cover w-full h-96 "
-                priority
-                placeholder="blur"
-                quality={50}
-            />
         </section>
     )
 }

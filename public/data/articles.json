@@ -1,5 +1,22 @@
 [
   {
+    "title": "Best laptops around ₹40,000 in 2025",
+    "url": "articles/best-laptops-around-40000-in-2025",
+    "description": "Find the best laptop under ₹40,000 for your needs, these are our recommendations for each category.",
+    "date": "2025-04-05",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "openGraph": {
+      "images": "/api/og?title=Best%20laptops%20around%20%E2%82%B940,000%20in%202025"
+    },
+    "type": "blog",
+    "thumbnail": "/images/articles/thumbnail.png"
+  },
+  {
     "title": "Raspberry Pi 5 16GB Launched",
     "url": "articles/raspberry-pi-5-16gb-launched",
     "description": "Raspberry Pi 5 now offers a 16GB RAM variant at $120, though for most users the 4GB model remains the best value.",
