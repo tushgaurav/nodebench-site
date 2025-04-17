@@ -1,5 +1,22 @@
 [
   {
+    "title": "OpenAI releases Codex CLI",
+    "url": "articles/openai-releases-codex-cli",
+    "description": "OpenAI released Codex CLI, AI coding agent that works in the terminal supporting OpenAI models like o3 and o4.",
+    "date": "2025-04-17",
+    "authors": [
+      {
+        "name": "Tushar Gaurav",
+        "url": "https://tushgaurav.in"
+      }
+    ],
+    "openGraph": {
+      "images": "/api/og?title=OpenAI%20releases%20Codex%20CLI"
+    },
+    "type": "blog",
+    "thumbnail": "/images/articles/openai-releases-codex-cli/placeholder.png"
+  },
+  {
     "title": "Best laptops around ₹40,000 in 2025",
     "url": "articles/best-laptops-around-40000-in-2025",
     "description": "Find the best laptop under ₹40,000 for your needs, these are our recommendations for each category.",
@@ -14,7 +31,7 @@
       "images": "/api/og?title=Best%20laptops%20around%20%E2%82%B940,000%20in%202025"
     },
     "type": "blog",
-    "thumbnail": "/images/articles/thumbnail.png"
+    "thumbnail": "/images/articles/best-laptops-around-40000-in-2025/placeholder.jpg"
   },
   {
     "title": "Raspberry Pi 5 16GB Launched",

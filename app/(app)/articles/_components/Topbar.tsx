@@ -14,7 +14,7 @@ export default function Topbar({
 }) {
   return (
     <div className="my-10">
-       <h1 className="font-bold text-3xl tracking-tight text-gray-900 hover:text-brand_orange transition-colors duration-300">
+       <h1 className="font-bold mt-20 text-3xl tracking-tight text-gray-900 hover:text-brand_orange transition-colors duration-300">
           {title}
         </h1>
       <hr className="mt-2 rounded-full w-full bg-brand_orange-light h-2" />

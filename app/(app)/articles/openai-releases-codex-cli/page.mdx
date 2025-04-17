@@ -1,0 +1,68 @@
+import Topbar from '../_components/Topbar.tsx'
+import {Content, MainContent, Tldr, AuthorCard} from "../_components/Content.tsx"
+import YoutubeEmbed from "../_components/YouTubeEmbed.tsx"
+
+export function generateMetadata() {
+    const metadataObject = {
+        title: 'OpenAI releases Codex CLI',
+        description: "OpenAI released Codex CLI, AI coding agent that works in the terminal supporting OpenAI models like o3 and o4.",
+        date: '2025-04-17',
+        authors: [{name: "Tushar Gaurav", url: "https://tushgaurav.in"}],
+    }
+
+    return {
+     ...metadataObject,
+        openGraph: {
+            images: `/api/og?title=${encodeURI(metadataObject.title)}`,
+        } 
+    }
+}
+
+export const articleInfo = {
+    type: 'blog',
+    thumbnail: "/images/articles/openai-releases-codex-cli/placeholder.png"
+}
+
+<Topbar
+    thumbnail='/images/articles/openai-releases-codex-cli/placeholder.png'
+    title="OpenAI releases Codex CLI"
+    author='Tushar Gaurav'
+    date='2025-04-17'
+/>
+
+
+<Content>
+
+<MainContent>
+Today, OpenAI released their open-source coding tool called Codex—and yes, this is different from the Codex model that OpenAI released a few years ago.
+
+It runs in your terminal and offers similar functionality to Anthropic's Claude.
+
+<YoutubeEmbed videoId="FUq9qRwrDrI" />
+
+# How to use it?
+Codex can be installed via npm or yarn and runs completely in your terminal.
+It does not support Windows. You can use it by simply calling codex in your project's directory. 
+It supports the latest OpenAI models such as o3 and o4 but any model that is available via the Responses API is supported.
+You will have to use your own API key to use it.
+
+# Why is it different?
+The tool offers basic functionality like modifying files and running commands directly in the terminal. Additionally, Codex is multimodal and can work with screenshots and diagrams, which Claude code cannot do.
+
+Surprisingly, it works very well. The tool displays every command it executes to the user and runs in a sandboxed environment. Beyond the OpenAI API calls, it has no network access, and file access is limited to the current folder and subfolders.
+
+# It's open source!
+This tool is open source, which is surprising coming from OpenAI. 
+You can find the source code at the [GitHub repository](https://github.com/openai/codex). 
+The tool is Apache licensed. I really like when OpenAI releases open-source products and can't wait for the open-source model that OpenAI is rumored to release.
+</MainContent>
+
+<Tldr>
+### TL;DR
+OpenAI released Codex CLI, AI coding agent that works in the terminal supporting OpenAI models like o3 and o4. It's similar to Claude Code.
+
+</Tldr>
+
+</Content>
+
+<AuthorCard authorSlug="tushgaurav" />
